@@ -1,0 +1,17 @@
+<app-search></app-search>
+<div class="ui inverted segment cocktail-item-list">
+  <div class="ui inverted relaxed divided list">
+    <div
+      class="item"
+      *ngFor="let cocktail of cocktailList"
+      (click)="cocktailDetail(cocktail.id)"
+    >
+      <div class="content">
+        <div class="header">
+          <img [src]="cocktail.imgThumb" class="ui avatar image"  style="height:100px; width:100px"/>
+          <span>{{ cocktail.name }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
